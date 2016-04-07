@@ -14,7 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="<%= 'active' if params[:controller] == 'author' %>"><%= link_to "Create author", new_author_path %></li>
+        <li class="<%= 'active' if params[:controller] == 'authors' %>"><%= link_to "Create Author", new_author_path %></li>
+        <li class="<%= 'active' if params[:controller] == 'stories' %>"><%= link_to "Create Story", new_story_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

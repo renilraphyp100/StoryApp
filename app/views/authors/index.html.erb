@@ -4,3 +4,37 @@ when an unknown printer took a galley of type and scrambled it to make a type sp
 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
 and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+<h1>Authors</h1>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Image</th>
+    <th>Story</th>
+  </tr>
+ 
+  <% @authors.each do |author| %>
+    <tr>
+        <td><%= author.name %></td>
+        <td><%= author.bio %></td>
+        <td><%= image_tag(author.picture_url, class: 'image_width_author') if author.picture? %></td>
+        <td>
+            <% author.stories.each do |story| %>
+              <div class="row well">
+                <div class="col-md-8">
+                  <h5><%= story.title %></h5>
+                  <p><%= story.content %></p>
+                </div>
+                <div class="col-md-4">
+                  <p><%= image_tag(story.picture_url, class: 'image_width') if story.picture? %></p>
+                </div>
+              </div>
+            <% end %>
+        
+          
+      </td>
+    </tr>
+  <% end %>
+</table>

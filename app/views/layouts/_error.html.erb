@@ -1,0 +1,14 @@
+  <% if object.errors.any? or ( object2 != nil and object2.errors.any? ) %>
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        <% object.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        <% if object2 != nil %>
+          <% object2.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>

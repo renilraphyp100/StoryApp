@@ -5,3 +5,12 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.image_width_author {
+    width:200px;
+}
+
+.image_width {
+    width:100px;
+}
